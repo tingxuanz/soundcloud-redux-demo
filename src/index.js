@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Stream from './components/Stream';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const tracks = [
+  {
+    title: 'Some track'
+  },
+  {
+    title: 'Some other track'
+  }
+];
+
+ReactDOM.render(
+  <Stream tracks={tracks} />, 
+  document.getElementById('root')
+);
 registerServiceWorker();
